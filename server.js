@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 3002;
 app.use(cors());
 app.use(bodyParser.json());
 
+console.log("Conectando a MongoDB con URI:", process.env.MONGODB_URL);
+
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
